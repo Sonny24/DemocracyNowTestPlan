@@ -1,0 +1,3118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DemocracyNow Test Plan</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="doc.css" />
+  </head>
+
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#test-scope" class="nav-link active">Test Scope</a></li>
+        <li><a href="#test-plan" class="nav-link">Test Plan</a></li>
+        <li><a href="#phase-one" class="nav-link">Phase One</a></li>
+        <li><a href="#phase-two" class="nav-link">Phase Two</a></li>
+        <li><a href="#phase-three" class="nav-link">Phase Three</a></li>
+        <li><a href="#phase-four" class="nav-link">Phase Four</a></li>
+        <li><a href="#phase-five" class="nav-link">Phase Five</a></li>
+        <li>
+          <a href="#validation-testing" class="nav-link">Validation Testing</a>
+        </li>
+        <li>
+          <a
+            href="full-text.pdf"
+            target="_blank"
+            class="download"
+            download="immersive-real-estate-vr-platform.pdf"
+          >
+            <img src="images/download.svg" alt="Download" />
+            <span>Full Text</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="container doc-content">
+      <!-- TEST SCOPE -->
+      <div id="test-scope" class="page active">
+        <h1 class="c38 c18" id="h.kuha7rsqm95t">
+          <span class="c102 c7 c117">Project 2: Testing a Software System</span>
+        </h1>
+        <p class="c1 c18">
+          <span class="c7">Prepared by Group 23</span
+          ><span class="c0">&nbsp;- Immersive Real Estate System Team</span>
+        </p>
+        <p class="c1 c18 c31"><span class="c0"></span></p>
+        <p class="c1 c18">
+          <span class="c7">Project being Tested</span
+          ><span
+            >: &nbsp;DemocracyNow, a capability to securely and anonymously cast
+            your vote for candidates on the ballot that corresponds to your
+            voting precinct, via your smartphone.</span
+          >
+        </p>
+        <h1 class="c38 c18" id="h.e0hbjakr8i1y">
+          <span class="c37 c7">Test Scope</span>
+        </h1>
+        <p class="c26 c18">
+          <span
+            >This section defines which functional areas of the DemocracyNow
+            system that will be tested, which items are out of scope, and how
+            non-functional requirements will be addressed</span
+          ><span class="c108 c32">. </span>
+        </p>
+        <h2 class="c53 c18" id="h.w7rvlffrecbk">
+          <span>1.</span><span class="c5 c89">&nbsp; &nbsp; &nbsp; &nbsp; </span
+          ><span class="c43 c58 c82 c83"
+            >Summary of DemocracyNow&rsquo;s Purpose</span
+          >
+        </h2>
+        <p class="c1 c18 c94">
+          <span class="c0"
+            >DemocracyNow is a secure, accessible digital voting system designed
+            to modernize elections and increase voter participation. It allows
+            eligible citizens to cast their ballots electronically through web
+            and mobile platforms while ensuring privacy, authenticity, and
+            verifiable integrity. The system combines multi-factor
+            authentication, encryption, and blockchain technology to guarantee
+            that every vote is both secure and anonymous, maintaining public
+            trust in a fully verifiable election process.</span
+          >
+        </p>
+        <h2 class="c53 c18" id="h.g4148pc62p8a">
+          <span>2.</span><span class="c5 c89">&nbsp; &nbsp; &nbsp; &nbsp; </span
+          ><span class="c43 c58 c82 c83">In-scope Targets:</span>
+        </h2>
+        <ol class="c25 lst-kix_il5axn69rbwz-0 start" start="1">
+          <li class="c1 c18 c61 li-bullet-0">
+            <span class="c43 c66 c7 c82"
+              >Authentication and Anonymous Credential Issuance</span
+            >
+          </li>
+        </ol>
+        <p class="c1 c18 c63">
+          <span class="c0"
+            >Verify secure three-factor authentication, token generation, and
+            identity separation between authentication and voting
+            components.</span
+          >
+        </p>
+        <p class="c1 c18 c31"><span class="c0"></span></p>
+        <ol class="c25 lst-kix_il5axn69rbwz-0" start="2">
+          <li class="c1 c18 c61 li-bullet-0">
+            <span class="c7"
+              >Ballot Delivery and Four-step Vote Confirmation</span
+            >
+          </li>
+        </ol>
+        <p class="c1 c18 c63">
+          <span class="c0"
+            >Confirm that ballots are correctly assigned by jurisdiction,
+            accessible through all platforms, and follow the deterministic
+            four-stage submission workflow. This workflow is described as
+            &ldquo;select&rdquo; &nbsp;&rarr; &ldquo;review&rdquo; &nbsp;&rarr;
+            &ldquo;confirm&rdquo; &nbsp;&rarr; &nbsp;&ldquo;submit&rdquo;.</span
+          >
+        </p>
+        <p class="c1 c18 c63 c31"><span class="c0"></span></p>
+        <ol class="c25 lst-kix_il5axn69rbwz-0" start="3">
+          <li class="c1 c18 c61 li-bullet-0">
+            <span class="c43 c66 c7 c82">Encryption and Blockchain Ledger</span>
+          </li>
+        </ol>
+        <p class="c1 c18 c63">
+          <span class="c0"
+            >Validate end-to-end encryption, blind signature implementation, and
+            immutable blockchain storage to ensure vote confidentiality and
+            tamper-proof records.</span
+          >
+        </p>
+        <p class="c1 c18 c115">
+          <span class="c32">&middot;</span
+          ><span class="c5 c32 c78">&nbsp; &nbsp; &nbsp;</span>
+        </p>
+        <ol class="c25 lst-kix_il5axn69rbwz-0" start="4">
+          <li class="c1 c18 c61 li-bullet-0">
+            <span class="c7">Verification Portal and Vote Receipts</span>
+          </li>
+        </ol>
+        <p class="c1 c18 c63">
+          <span class="c0"
+            >Test that cryptographic receipts are issued correctly and can be
+            verified independently through zero-knowledge proofs without
+            revealing vote contents.</span
+          >
+        </p>
+        <p class="c1 c18 c63 c31"><span class="c0"></span></p>
+        <ol class="c25 lst-kix_il5axn69rbwz-0" start="5">
+          <li class="c1 c18 c61 li-bullet-0">
+            <span class="c7">Accessibility and Performance Requirements</span>
+          </li>
+        </ol>
+        <p class="c1 c18 c63">
+          <span class="c0"
+            >Confirm compliance with WCAG 2.1 AA accessibility standards (screen
+            readers, high contrast, text scaling, multi-language support) and
+            system performance expectations (availability, scalability, and
+            response times during peak voting).</span
+          >
+        </p>
+        <h2 class="c18 c53" id="h.tmia42f1ade6">
+          <span>3.</span><span class="c5 c89">&nbsp; &nbsp; &nbsp; &nbsp; </span
+          ><span class="c43 c58 c82 c83">Out-of-scope Areas:</span>
+        </h2>
+        <p class="c1 c18 c94">
+          <span class="c0"
+            >The following areas are intentionally excluded from this test plan
+            based on assignment scope:</span
+          >
+        </p>
+        <ol class="c25 lst-kix_njmmve6jumdr-0 start" start="1">
+          <li class="c1 c18 c61 li-bullet-0">
+            <span class="c7">Unit tests:</span><span class="c32">&nbsp;</span
+            ><span class="c0"
+              >Developer-level tests for individual modules or classes are
+              outside the integration and validation focus.</span
+            >
+          </li>
+        </ol>
+        <p class="c1 c18 c31"><span class="c0"></span></p>
+        <ol class="c25 lst-kix_njmmve6jumdr-0" start="2">
+          <li class="c1 c18 c61 li-bullet-0">
+            <span class="c7">Expected results or execution data:</span
+            ><span class="c32">&nbsp;</span
+            ><span class="c0"
+              >Specific test data, pass/fail criteria, and actual outcomes will
+              not be included.</span
+            >
+          </li>
+        </ol>
+        <p class="c1 c18 c31"><span class="c0"></span></p>
+        <ol class="c25 lst-kix_njmmve6jumdr-0" start="3">
+          <li class="c1 c18 c61 li-bullet-0">
+            <span class="c7">Resource and schedule details:</span
+            ><span class="c32">&nbsp;</span
+            ><span class="c0"
+              >Personnel assignments, tools, and test scheduling are not part of
+              this plan.</span
+            >
+          </li>
+        </ol>
+        <h2 class="c18 c94 c97" id="h.m3c12u2iw8yl">
+          <span>4.</span><span class="c5 c89">&nbsp; &nbsp; &nbsp; &nbsp; </span
+          ><span class="c43 c58 c82 c83">Scope boundaries</span>
+        </h2>
+        <p class="c28 c18">
+          <span
+            >This section describes what is being verified at system level and
+            what&rsquo;s not.</span
+          >
+        </p>
+        <p class="c18 c28">
+          <span class="c0"
+            >At the system level, the test plan will verify that DemocracyNow
+            functions as a cohesive, secure, and accessible platform, meaning
+            all major modules (authentication, ballot management, encryption,
+            ledger, verification) integrate correctly and meet their specified
+            functional and performance goals.</span
+          >
+        </p>
+        <p class="c28 c18">
+          <span class="c0"
+            >It will not verify internal code logic, developer-specific unit
+            functionality, or infrastructure deployment performance beyond
+            defined system requirements. The goal is to ensure that the
+            integrated system behaves correctly and securely as a whole,
+            validating trust, integrity, accessibility, and auditability in
+            real-world election use scenarios.</span
+          >
+        </p>
+        <p class="c26 c18"><span class="c43 c82 c83 c108">&nbsp;</span></p>
+      </div>
+
+      <!-- Test Plan -->
+      <div id="test-plan" class="page">
+        <h1 class="c38 c18" id="h.earhmi70xm96">
+          <span class="c37 c7">Test Plan</span>
+        </h1>
+        <p class="c1 c18">
+          <span class="c0"
+            >This section outlines how the testing will be approached along with
+            the rationale for the given approach.</span
+          >
+        </p>
+        <p class="c1 c18 c31 c115"><span class="c0"></span></p>
+        <h2 id="h.qd6s2dsmsyxj" style="display: inline">
+          <span>1.</span><span class="c5 c89">&nbsp; &nbsp; &nbsp; &nbsp; </span
+          ><span id="unbold">Integration Test Strategy </span>
+        </h2>
+        <p class="c1 c18 c94">
+          <span class="c0"
+            >We recommend a bottom-up integration approach. DemocracyNow&rsquo;s
+            risk is concentrated in backend cryptography, data separation, and
+            immutable recording. By bringing up the platform from the
+            edge/gateway to identity, then to the preparation of ballots, then
+            to casting ballots, encrypting the transmission and recording the
+            transaction on the ledger, we minimize the number of UI stubs
+            we&rsquo;d otherwise need and prove the identity-vote separation
+            early. This also lets us validate opaque tokens and no-PII crossing
+            before and end-to-end flows.</span
+          >
+        </p>
+        <h2 class="c53 c18" id="h.uzbwltewymss">
+          <span>2.</span><span class="c5 c89">&nbsp; &nbsp; &nbsp; &nbsp; </span
+          ><span id="unbold">Integration Phases </span
+          ><span class="c43 c58 c82 c83">(bottom-up)</span>
+        </h2>
+        <h3 class="c76 c18 c94" id="h.tq95oky6xq3t">
+          <span class="c66 c91"
+            >This section demonstrates how the bottom-up test plans will be
+            broken into phases and sequenced accordingly.</span
+          >
+        </h3>
+        <h3 class="c18 c63 c76" id="h.lh99awlmnh5r">
+          <span class="c66 c7 c91"
+            >Phase 1: Backend (Gateway) Integration Testing</span
+          >
+        </h3>
+        <p class="c1 c18 c63">
+          <span>Phase one will include testing of the </span
+          ><span class="c0"
+            >API gateway and observability of the transmissions, including TLS,
+            routing, security headers, rate limits, passive logging.</span
+          >
+        </p>
+        <p class="c1 c18 c63 c31"><span class="c0"></span></p>
+        <p class="c18 c63 c105">
+          <span class="c7"
+            >Phase 2: Identity and Anonymous Credential Boundary</span
+          >
+        </p>
+        <p class="c1 c18 c63">
+          <span class="c0"
+            >Phase two will address identity and anonymous credential boundary
+            isolation, screen lockdown, and signaling</span
+          >
+        </p>
+        <p class="c1 c18 c63 c31"><span class="c15"></span></p>
+        <p class="c1 c18 c63">
+          <span class="c7"
+            >Phase 3: Ballot Delivery and Four-Stage Confirmation</span
+          ><span class="c7">&nbsp;</span>
+        </p>
+        <p class="c1 c18 c63">
+          <span class="c0"
+            >FR-5 to FR-9 and FR-8.1-8.4 Deterministic workflow across
+            PWA/iOS/Android with WCAG behaviors.</span
+          >
+        </p>
+        <p class="c1 c18 c63 c31"><span class="c15"></span></p>
+        <p class="c1 c18 c63">
+          <span class="c7">Phase 4</span
+          ><span class="c7">: Cast Ballot, Encrypt, Ledger and Audit</span>
+        </p>
+        <p class="c1 c18 c63">
+          <span class="c0"
+            >FR-10, FR-12 to FR-16, FR-13/FR-19/FR-20 key rotation and immutable
+            record.</span
+          >
+        </p>
+        <p class="c1 c18 c63 c31"><span class="c0"></span></p>
+        <p class="c1 c18 c63">
+          <span class="c7">Phase 5:</span
+          ><span class="c7"
+            >&nbsp;Vote Tally, Verification Portal, and Pollbook Sync</span
+          >
+        </p>
+        <p class="c1 c18 c63">
+          <span class="c0"
+            >FR-17, FR-18, FR-25, and independent verification
+            (FR-20/FR-16)</span
+          >
+        </p>
+        <p class="c18 c31 c57"><span class="c15"></span></p>
+      </div>
+
+      <!-- Phase One -->
+      <div id="phase-one" class="page">
+        <h1 class="c38 c18" id="h.m3ciouf6yzd">
+          <span class="c58"
+            >Phase One: Backend (Gateway) Integration Testing</span
+          >
+        </h1>
+        <p class="c26 c18">
+          <span>&nbsp;</span
+          ><span
+            >Goal: Establish a correct, observable network edge with mock
+            downstream; no PII leakage.</span
+          >
+        </p>
+        <p class="c20 c18"><span class="c14"></span></p>
+        <table class="c85">
+          <thead>
+            <tr class="c70">
+              <td class="c74" colspan="1" rowspan="1">
+                <p class="c1"><span class="c40 c7">Test Case ID</span></p>
+              </td>
+              <td class="c64" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c40 c7">Test Case Objective</span>
+                </p>
+              </td>
+              <td class="c22" colspan="1" rowspan="1">
+                <p class="c19">
+                  <span class="c40 c7">Test Case Description</span>
+                </p>
+              </td>
+              <tbody></tbody>
+            </tr>
+            <tr class="c71">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-1a</span></p>
+              </td>
+              <td class="c114" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Verify system uses proper GET, POST, PUT, and DELETE
+                    request methods, adhering to standard REST procedures</span
+                  >
+                </p>
+              </td>
+              <td class="c11" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >The system exposes endpoints with a sensible URL hierarchy.
+                    Query parameters are only used for optional fields. GET
+                    requests should never contain any data in their body. The
+                    system must remain stateless - the server must not have any
+                    memory of the user&rsquo;s session, but can still store
+                    information about the user.</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c8">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-1b</span></p>
+              </td>
+              <td class="c104" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Keep an audit log of all user and system activity to
+                    monitor for security breaches, or attempts to break
+                    in.</span
+                  >
+                </p>
+              </td>
+              <td class="c11" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Verify that a well-known and reliable logging system is in
+                    use and logs to accessible endpoints, such as a text file
+                    left on the filesystem, or a syslog entry. All user actions,
+                    whether they fail or succeed, must be entered into this log.
+                    System operations that were not initiated by a user must
+                    also be kept in this log. Check that the log is denoted with
+                    5 levels: DEBUG, INFO, WARN, ERROR, FATAL. DEBUG logs are
+                    minute details useful for debugging, Ensure that this is
+                    only shown in development builds, or when a specific flag is
+                    set. INFO logs will contain user and system operation
+                    notices, such as a successful or unsuccessful login. WARN
+                    will alert that conditions may not be ideal for a certain
+                    situation. ERROR denotes something that went wrong, but was
+                    recoverable, such as a bad request or timeout. FATAL must
+                    only be logged right before the system crashes and goes
+                    offline.</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c6">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-1c</span></p>
+              </td>
+              <td class="c49 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Keep security breaches localized to reduce data leak
+                    volume</span
+                  >
+                </p>
+              </td>
+              <td class="c11" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Verify that all outside data is sanitized and has sensible
+                    restrictions to prevent common attacks such as SQL-injection
+                    or buffer overflows. For example, a username does not need
+                    to exceed 20 characters.</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c34">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-1d</span></p>
+              </td>
+              <td class="c49 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Validate authentication session is terminated after
+                    authentication is successful</span
+                  >
+                </p>
+              </td>
+              <td class="c11" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >User authenticates as normal. Attempting to navigate back
+                    to previous authentication pages or closing browser should
+                    terminate session and not allow user to go back</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c70">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-1e</span></p>
+              </td>
+              <td class="c49 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Keep security breaches localized to reduce data leak
+                    volume</span
+                  >
+                </p>
+              </td>
+              <td class="c11" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Verify that all outside data is sanitized and has sensible
+                    restrictions to prevent common attacks such as SQL-injection
+                    or buffer overflows. For example, a username does not need
+                    to exceed 20 characters.</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c34">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-1f</span></p>
+              </td>
+              <td class="c49 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Ensure identity never co-resides with ballot artifacts in
+                    Phase-5 subsystems.</span
+                  >
+                </p>
+              </td>
+              <td class="c11" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Inspect payloads, ledger records, receipts, proofs, and
+                    audit logs; attempt to pass identity claims downstream and
+                    confirm strict rejection; verify only opaque
+                    tokens/communities are present.</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c8">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-1g</span></p>
+              </td>
+              <td class="c49 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Ensure voting workflow is efficient enough to be completed
+                    in a timely manner</span
+                  >
+                </p>
+              </td>
+              <td class="c11" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Verify that users using the system take, on average, 5
+                    minutes to sign up for an account and submit a vote to the
+                    system.</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c113">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-1h</span></p>
+              </td>
+              <td class="c49 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Verify the system maintains full functionality when
+                    operating at extremely low bandwidth.</span
+                  >
+                </p>
+              </td>
+              <td class="c11" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Throttle network speed to &le;56 Kbps and test ballot
+                    loading, selection, submission, and confirmation steps to
+                    ensure no failures or timeouts occur.</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c8">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-1i</span></p>
+              </td>
+              <td class="c49 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3">Ensure reliable and very high uptime </span>
+                </p>
+              </td>
+              <td class="c11" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Verify that deployment spans multiple regions, and that
+                    each region has fallbacks in case any of the systems go
+                    down. Also ensure that regions can fallback onto other
+                    regions. These systems must be able to communicate with each
+                    other to ensure consistency across data.</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c30">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-1j</span></p>
+              </td>
+              <td class="c49 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Ensure high concurrent user count does not affect
+                    usability</span
+                  >
+                </p>
+              </td>
+              <td class="c11" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Verify that deployment automatically scales to multiple
+                    nodes to compensate for large bursts of users, and just also
+                    automatically downscales to fewer nodes to prevent
+                    unnecessary cost for periods of low traffic.</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c34">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-1k</span></p>
+              </td>
+              <td class="c49 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Ensure all vote selections and confirmation data are
+                    reliably stored and synced to the backend without
+                    loss.</span
+                  >
+                </p>
+              </td>
+              <td class="c9" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Perform ballot submission and monitor the database for
+                    correct write operations, sync operations, retry handling,
+                    and resilience against intermittent connectivity.</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c56">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-1l</span></p>
+              </td>
+              <td class="c49 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Verify authentication, ballot management, and vote
+                    processing modules can be hot-swapped</span
+                  >
+                </p>
+              </td>
+              <td class="c11" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Ensure that, while the system is still running, the
+                    authentication, ballot management, vote processing modules
+                    can be swapped with newer or alternative versions, with
+                    minimal effect on downtime (&lt;10 seconds)</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c41">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-1m</span></p>
+              </td>
+              <td class="c49 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Ensure microservices automatically scale depending on
+                    demand</span
+                  >
+                </p>
+              </td>
+              <td class="c11" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Verify that authentication, ballot management, and vote
+                    processing microservices are appropriately and automatically
+                    scaled up and down according to load, with no effect on
+                    downtime.</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c71">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-1n</span></p>
+              </td>
+              <td class="c49 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3">Ensure separation of concerns</span>
+                </p>
+              </td>
+              <td class="c11" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Verify that microservices do not depend on one another, and
+                    could effectively perform their task without any other
+                    microservice being available. Ensure that each microservice
+                    does not take in data that is irrelevant to its operation.
+                    For example, ballot management does not need the
+                    user&rsquo;s password.</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c41">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-1o</span></p>
+              </td>
+              <td class="c49 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Comply with state and federal regulations</span
+                  >
+                </p>
+              </td>
+              <td class="c11" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Ensure that the system complies with requirements of the
+                    Help America Vote Act and guidelines set by the Election
+                    Assistance Commission Voting System Standards. Additionally,
+                    verify that the system does not infringe on state
+                    regulations for electronic voting systems.</span
+                  >
+                </p>
+              </td>
+            </tr>
+          </thead>
+        </table>
+        <p class="c20 c18"><span class="c14"></span></p>
+        <p class="c26 c18">
+          <span class="c0"
+            >Phase 1 tests cover the following functional and non-functional
+            requirements:</span
+          >
+        </p>
+        <table class="c85">
+          <thead>
+            <tr class="c41">
+              <td class="c107" colspan="1" rowspan="1">
+                <p class="c1"><span class="c40 c7">Requirement ID</span></p>
+              </td>
+              <td class="c69" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c40 c7">Requirement Description</span>
+                </p>
+              </td>
+              <tbody></tbody>
+            </tr>
+            <tr class="c41">
+              <td class="c45 c46" colspan="1" rowspan="1">
+                <p class="c36"><span class="c13 c7">FR-21</span></p>
+              </td>
+              <td class="c51 c46" colspan="1" rowspan="1">
+                <p class="c36"><span class="c5">RESTful API Gateway</span></p>
+              </td>
+            </tr>
+            <tr class="c56">
+              <td class="c45 c46" colspan="1" rowspan="1">
+                <p class="c36"><span class="c13 c7">FR-23</span></p>
+              </td>
+              <td class="c51 c46" colspan="1" rowspan="1">
+                <p class="c36">
+                  <span class="c5">Passive logging microservice</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="c71">
+              <td class="c45" colspan="1" rowspan="1">
+                <p class="c36"><span class="c13 c7">FR-24</span></p>
+              </td>
+              <td class="c51" colspan="1" rowspan="1">
+                <p class="c36">
+                  <span class="c5">Defense-in-depth layered security</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="c8">
+              <td class="c45" colspan="1" rowspan="1">
+                <p class="c36"><span class="c7 c13">NFR-4</span></p>
+              </td>
+              <td class="c51" colspan="1" rowspan="1">
+                <p class="c36">
+                  <span class="c5">24-hour credential expiration</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="c30">
+              <td class="c45" colspan="1" rowspan="1">
+                <p class="c36"><span class="c13 c7">NFR-6</span></p>
+              </td>
+              <td class="c51" colspan="1" rowspan="1">
+                <p class="c36">
+                  <span class="c5">Defense-in-depth layered security</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="c8">
+              <td class="c45 c46" colspan="1" rowspan="1">
+                <p class="c36"><span class="c13 c7">NFR-8</span></p>
+              </td>
+              <td class="c51 c46" colspan="1" rowspan="1">
+                <p class="c36">
+                  <span class="c5">No PII storage with vote data</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="c81">
+              <td class="c45 c46" colspan="1" rowspan="1">
+                <p class="c36"><span class="c13 c7">NFR-15</span></p>
+              </td>
+              <td class="c51 c46" colspan="1" rowspan="1">
+                <p class="c36">
+                  <span class="c5">5-minute completion time (95% users)</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="c71">
+              <td class="c45" colspan="1" rowspan="1">
+                <p class="c36"><span class="c13 c7">NFR-16</span></p>
+              </td>
+              <td class="c51" colspan="1" rowspan="1">
+                <p class="c36">
+                  <span class="c5">Low-bandwidth support (56 Kbps)</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="c8">
+              <td class="c45" colspan="1" rowspan="1">
+                <p class="c36"><span class="c13 c7">NFR-17</span></p>
+              </td>
+              <td class="c51" colspan="1" rowspan="1">
+                <p class="c36"><span class="c5">99.99% uptime</span></p>
+              </td>
+            </tr>
+            <tr class="c8">
+              <td class="c45 c46" colspan="1" rowspan="1">
+                <p class="c36"><span class="c13 c7">NFR-18</span></p>
+              </td>
+              <td class="c51 c46" colspan="1" rowspan="1">
+                <p class="c36"><span class="c5">10M concurrent users</span></p>
+              </td>
+            </tr>
+            <tr class="c8">
+              <td class="c45" colspan="1" rowspan="1">
+                <p class="c36"><span class="c13 c7">NFR-19</span></p>
+              </td>
+              <td class="c51" colspan="1" rowspan="1">
+                <p class="c36">
+                  <span class="c5">3-second response time</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="c8">
+              <td class="c45 c46" colspan="1" rowspan="1">
+                <p class="c36"><span class="c13 c7">NFR-21</span></p>
+              </td>
+              <td class="c51 c46" colspan="1" rowspan="1">
+                <p class="c36">
+                  <span class="c5">Independent module modification</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="c30">
+              <td class="c45" colspan="1" rowspan="1">
+                <p class="c36"><span class="c13 c7">NFR-22</span></p>
+              </td>
+              <td class="c51" colspan="1" rowspan="1">
+                <p class="c36">
+                  <span class="c5">Independent scaling by load pattern</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="c41">
+              <td class="c45 c46" colspan="1" rowspan="1">
+                <p class="c36"><span class="c13 c7">NFR-23</span></p>
+              </td>
+              <td class="c51 c46" colspan="1" rowspan="1">
+                <p class="c36">
+                  <span class="c5">Clear separation of concerns</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="c71">
+              <td class="c45" colspan="1" rowspan="1">
+                <p class="c36"><span class="c13 c7">NFR-27</span></p>
+              </td>
+              <td class="c51" colspan="1" rowspan="1">
+                <p class="c36">
+                  <span class="c5">HAVA and EAC compliance</span>
+                </p>
+              </td>
+            </tr>
+          </thead>
+        </table>
+        <p class="c20 c18"><span class="c0"></span></p>
+      </div>
+
+      <!-- PHASE TWO -->
+      <div id="phase-two" class="page">
+        <h1 class="c38 c18" id="h.mvbla5ricyda">
+          <span class="c58"
+            >Phase Two: Identity and Anonymous Credential Boundary</span
+          >
+        </h1>
+        <p class="c26 c18">
+          <span>&nbsp;</span
+          ><span
+            >Goal: Prove three-factor authentication and issuance of
+            time-limited opaque credentials; ensure identity never crosses into
+            vote flow.</span
+          >
+        </p>
+        <p class="c20 c18"><span class="c14"></span></p>
+        <table class="c85">
+          <thead>
+            <tr class="c44">
+              <td class="c74" colspan="1" rowspan="1">
+                <p class="c1"><span class="c40 c7">Test Case ID</span></p>
+              </td>
+              <td class="c64" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c40 c7">Test Case Objective</span>
+                </p>
+              </td>
+              <td class="c22" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c40 c7">Test Case Description</span>
+                </p>
+              </td>
+              <tbody></tbody>
+            </tr>
+            <tr class="c29">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-2a</span></p>
+              </td>
+              <td class="c49 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Ensure the process to authenticate voter identity grants
+                    access only after 3 stage authentication</span
+                  >
+                </p>
+              </td>
+              <td class="c9" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Run and pass digital signature, 2FA, and secure
+                    identification tests in sequence using the same test user.
+                    An eligible citizen should pass all three stages, and an
+                    ineligible person (e.g: noncitizen or felon) should fail and
+                    be denied access.</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c52">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-2b</span></p>
+              </td>
+              <td class="c49 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Given a citizen ID, ensure that system correctly verifies
+                    eligible voters</span
+                  >
+                </p>
+              </td>
+              <td class="c9" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Upload multiple forms of valid government IDs. The system
+                    should check the authenticity of the ID, and if user is an
+                    eligible voter, digital signature verification should pass.
+                    Test using expired ID, unauthentic ID, and ID for ineligible
+                    person, these cases should prevent the user from progressing
+                    to the next authentication step.</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c52">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-2c</span></p>
+              </td>
+              <td class="c49 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Ensure the two factor authentication process works
+                    correctly</span
+                  >
+                </p>
+              </td>
+              <td class="c9" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Initiate 2FA process. Verify that the system generates a
+                    OTP and delivers it through the configured channel to the
+                    user&#39;s second device. Ensure that entering said OTP
+                    approves authentication. Entering incorrect/expired/used OTP
+                    should fail and prevent user from accessing voting.</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c34">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-2d</span></p>
+              </td>
+              <td class="c49 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Ensure biometric scanning process works</span
+                  >
+                </p>
+              </td>
+              <td class="c9" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Authorized user scans fingerprint and face to access the
+                    app. System should verify identity and allow user to access
+                    the app. Attempt login with unauthorized users using face
+                    and fingerprint. App should not allow entry.</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c29">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-2e</span></p>
+              </td>
+              <td class="c49 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3">Voter registration database validation</span>
+                </p>
+              </td>
+              <td class="c9" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Attempt to authenticate eligible voter using normal
+                    process, voter database should return eligible and user
+                    should be allowed to continue authentication. Non-existent
+                    voters and ineligible people should be tested in the same
+                    way and denied.</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c48">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-2f</span></p>
+              </td>
+              <td class="c49 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Opaque token authentication verification</span
+                  >
+                </p>
+              </td>
+              <td class="c9" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Upon completion of all authentication steps, verify that
+                    the system generates a time-limited anonymous credential
+                    that contains no personally identifiable information. Verify
+                    that token is not JSON, and the token enables access to
+                    ballot but does not expose any identity attributes. Any
+                    attempts to reuse a token should fail the test.</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c34">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-2g</span></p>
+              </td>
+              <td class="c49 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Validate authentication session is terminated after
+                    authentication is successful</span
+                  >
+                </p>
+              </td>
+              <td class="c9" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >User authenticates as normal. Attempting to navigate back
+                    to previous authentication pages or closing browser should
+                    terminate session and not allow user to go back</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c106">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-2h</span></p>
+              </td>
+              <td class="c49 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Automatically enters lockdown mode when an active voting
+                    session is detected and prevents unauthorized actions.</span
+                  >
+                </p>
+              </td>
+              <td class="c9" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Simulate an active voting session and confirm that the
+                    device disables all non-voting functions, blocks exit
+                    attempts, prevents external navigation, and restricts
+                    OS-level features until the session ends.</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c99">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-2i</span></p>
+              </td>
+              <td class="c49 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3">Submission Phase Validation</span>
+                </p>
+              </td>
+              <td class="c9" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >(i) Verify that the token is not JSON (i.e., is opaque)
+                    (ii) Verify that the correct token can be used to access the
+                    data (iii) Verify that an incorrect token cannot be used to
+                    access the data</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c71">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-2j</span></p>
+              </td>
+              <td class="c49 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c43 c3"
+                    >Retain authentication between modules, without exposing
+                    PII</span
+                  >
+                </p>
+              </td>
+              <td class="c11" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Verify that opaque tokens are passed between internal
+                    systems and can be authenticated without exposing any user
+                    PII. Any part of the system that receives an invalid token
+                    simply halts, throwing an exception to be handled by the
+                    API.</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c65">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-2k</span></p>
+              </td>
+              <td class="c49 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3">Submission Phase Validation</span>
+                </p>
+              </td>
+              <td class="c11" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >(i) Verify that the key of the identity of the voter in the
+                    voter file is distinct from the voter identifier in the file
+                    of ballots cast. (ii) Attempt to run the identity
+                    cryptographic key on the ballot identifier and confirm that
+                    the key does not decrypt the ballot identifier (iii) Attempt
+                    to run the ballot cryptographic key on the voter identity
+                    identifier and confirm that the key does not decrypt the
+                    identity identifier</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c12">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-2l</span></p>
+              </td>
+              <td class="c49 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Ensure separation of concerns with regards to PII</span
+                  >
+                </p>
+              </td>
+              <td class="c11" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Verify that modules are only exposed to information
+                    strictly necessary for their operation. Ensure use of opaque
+                    tokens to hide information from modules that do not have
+                    authorization.</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c65">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-2m</span></p>
+              </td>
+              <td class="c49 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3">Submission Phase Validation</span>
+                </p>
+              </td>
+              <td class="c11" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >(i) Verify that the key of the identity of the voter in the
+                    voter file is distinct from the voter identifier in the file
+                    of ballots cast. (ii) Attempt to run the identity
+                    cryptographic key on the ballot identifier and confirm that
+                    the key does not decrypt the ballot identifier (iii) Attempt
+                    to run the ballot cryptographic key on the voter identity
+                    identifier and confirm that the key does not decrypt the
+                    identity identifier</span
+                  >
+                </p>
+              </td>
+            </tr>
+          </thead>
+        </table>
+        <p class="c20 c18"><span class="c14"></span></p>
+        <p class="c26 c18">
+          <span
+            >Phase 2 tests cover the following functional and non-functional
+            requirements:</span
+          >
+        </p>
+        <table class="c85">
+          <thead>
+            <tr class="c12">
+              <td class="c90" colspan="1" rowspan="1">
+                <p class="c1"><span class="c40 c7">Requirement ID</span></p>
+              </td>
+              <td class="c112" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c40 c7">Requirement Description</span>
+                </p>
+              </td>
+              <tbody></tbody>
+            </tr>
+            <tr class="c8">
+              <td class="c39 c46" colspan="1" rowspan="1">
+                <p class="c1"><span class="c13 c7">FR-1</span></p>
+              </td>
+              <td class="c33" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c5">Three-factor authentication process</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="c71">
+              <td class="c39" colspan="1" rowspan="1">
+                <p class="c1"><span class="c13 c7">FR-1.1</span></p>
+              </td>
+              <td class="c59" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c5"
+                    >Verify digital signatures from government IDs</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c81">
+              <td class="c39 c46" colspan="1" rowspan="1">
+                <p class="c1"><span class="c13 c7">FR-1.2</span></p>
+              </td>
+              <td class="c33" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c5"
+                    >Two-factor authentication (password + OTP)</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c71">
+              <td class="c39" colspan="1" rowspan="1">
+                <p class="c1"><span class="c13 c7">FR-1.3</span></p>
+              </td>
+              <td class="c59" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c5"
+                    >Biometric verification (fingerprint/facial)</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c8">
+              <td class="c39 c46" colspan="1" rowspan="1">
+                <p class="c1"><span class="c13 c7">FR-1.4</span></p>
+              </td>
+              <td class="c33" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c5">Integration with state voter databases</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="c8">
+              <td class="c39" colspan="1" rowspan="1">
+                <p class="c1"><span class="c13 c7">FR-2</span></p>
+              </td>
+              <td class="c59" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c5">Issue anonymous credentials (tokens)</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="c8">
+              <td class="c39 c46" colspan="1" rowspan="1">
+                <p class="c1"><span class="c13 c7">FR-3</span></p>
+              </td>
+              <td class="c33" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c5">Terminate authentication sessions</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="c81">
+              <td class="c39 c46" colspan="1" rowspan="1">
+                <p class="c1"><span class="c13 c7">FR-4</span></p>
+              </td>
+              <td class="c33" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c5">Activate device lockdown mode</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="c41">
+              <td class="c39 c46" colspan="1" rowspan="1">
+                <p class="c1"><span class="c13 c7">FR-11</span></p>
+              </td>
+              <td class="c33" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c5"
+                    >Opaque token exchange between components</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c56">
+              <td class="c39" colspan="1" rowspan="1">
+                <p class="c1"><span class="c13 c7">FR-22</span></p>
+              </td>
+              <td class="c59" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c5">Token-based communication</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="c41">
+              <td class="c39" colspan="1" rowspan="1">
+                <p class="c1"><span class="c13 c7">NFR-2</span></p>
+              </td>
+              <td class="c59" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c5">Blind signature cryptography</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="c41">
+              <td class="c39 c46" colspan="1" rowspan="1">
+                <p class="c1"><span class="c13 c7">NFR-3</span></p>
+              </td>
+              <td class="c33" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c5">Information hiding principle</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="c41">
+              <td class="c39" colspan="1" rowspan="1">
+                <p class="c1"><span class="c13 c7">NFR-7</span></p>
+              </td>
+              <td class="c59" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c5">Mathematically untraceable votes</span>
+                </p>
+              </td>
+            </tr>
+          </thead>
+        </table>
+        <p class="c20 c18"><span class="c14"></span></p>
+      </div>
+
+      <!-- PHASE THREE -->
+      <div id="phase-three" class="page">
+        <h1 class="c38 c18" id="h.cfgsvzc1rkv7">
+          <span class="c58"
+            >Phase Three: Ballot Delivery and Four-Stage Confirmation</span
+          >
+        </h1>
+        <p class="c26 c18">
+          <span
+            >Goal: Validate jurisdiction-specific ballots, unbiased rendering,
+            accessibility, and the deterministic FR-8 confirmation
+            sequence.</span
+          >
+        </p>
+        <p class="c20 c18"><span class="c14"></span></p>
+        <table class="c85">
+          <thead>
+            <tr class="c56">
+              <td class="c74" colspan="1" rowspan="1">
+                <p class="c1"><span class="c40 c7">Test Case ID</span></p>
+              </td>
+              <td class="c64" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c40 c7">Test Case Objective</span>
+                </p>
+              </td>
+              <td class="c22" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c40 c7">Test Case Description</span>
+                </p>
+              </td>
+              <tbody></tbody>
+            </tr>
+            <tr class="c84">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-3a</span></p>
+              </td>
+              <td class="c49 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Loads and displays the correct ballot style based on
+                    jurisdiction and voter registration data.</span
+                  >
+                </p>
+              </td>
+              <td class="c9" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Authenticate a voter with a known jurisdiction profile and
+                    check that the ballot matches the assigned precinct,
+                    including contests, ordering, and jurisdiction-specific
+                    rules.</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c88">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-3b</span></p>
+              </td>
+              <td class="c49 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Delivers a consistent ballot-marking experience across all
+                    supported platforms.</span
+                  >
+                </p>
+              </td>
+              <td class="c9" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Access the ballot from PWA, iOS, and Android devices and
+                    verify consistency in UI layout, navigation, candidate
+                    lists, and interaction behavior across channels.</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c119">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-3c</span></p>
+              </td>
+              <td class="c49 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >The candidate list is displayed in a randomized or
+                    non-biased manner in accordance with election
+                    guidelines.</span
+                  >
+                </p>
+              </td>
+              <td class="c9" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Open multiple ballot sessions and confirm that candidate
+                    ordering follows the jurisdiction&rsquo;s fairness rules
+                    (e.g., rotation, random ordering) and displays correct
+                    information without omissions.</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c122">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-3d</span></p>
+              </td>
+              <td class="c49 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3">Four-stage confirmation</span>
+                </p>
+              </td>
+              <td class="c9" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >When casting a vote, verify that the confirmation process
+                    takes all four stages: selection, review, confirmation,
+                    submit</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c121">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-3e</span></p>
+              </td>
+              <td class="c49 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3">Selection phase validation</span>
+                </p>
+              </td>
+              <td class="c9" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >(i) Verify that the app opens to the Selection Phase (ii)
+                    Verify selection phase enables users to select one and only
+                    one candidate for each open office or seat (iii) Verify that
+                    the Review button appears after at least on selection is
+                    made</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c86">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-3f</span></p>
+              </td>
+              <td class="c49 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3">Review Phase Validation</span>
+                </p>
+              </td>
+              <td class="c9" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >(i) Verify the app opens the Review page after clicking the
+                    Review button on the Selection page (ii) Verify that the
+                    Review page has a Change button that returns the user to the
+                    Selection page when clicked (iii) Verify that the user&#39;s
+                    votes are not changed from the Selection page to/from the
+                    Review page (iv) Verify that the user navigates to the
+                    Confirmation page when the Confirm button is clicked</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c111">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-3g</span></p>
+              </td>
+              <td class="c49 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3">Confirmation Phase Validation</span>
+                </p>
+              </td>
+              <td class="c9" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >(i) Verify that the Confirmation page opens with the
+                    Confirm button is clicked on the Review Page (ii) Verify
+                    that the user&#39;s vote has not changed when navigating
+                    from the Review Page to/from the Confirm page (iii) Verify
+                    that the Confirmation page has a large button with wide
+                    margins (iv) Verify that user is navigated to the Submission
+                    page when the Confirm button is clicked</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c73">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-3h</span></p>
+              </td>
+              <td class="c49 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3">Submission Phase Validation</span>
+                </p>
+              </td>
+              <td class="c9" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >(i) Verify the user navigated from the Confirmation page to
+                    the Submission page when the Confirm button is clicked on
+                    the Confirmation page (ii) Verify the user&#39;s vote
+                    selection is unchanged from the Confirmation page to the
+                    Submission page (iii) Confirm that a count-down clock is
+                    visible and counts down from 3 to 1 (iv) Verify that the app
+                    automatically cancels the user&#39;s submission if the
+                    count-down clock reaches zero (v) Verify that the user&#39;s
+                    vote is submitted if the Submit button is clicked before the
+                    clock reaches zero. (vi) Verify that the user can stop the
+                    clock by clicking the Back button (vii) Verify that the
+                    clock restarts at 3 when the user returns to the Submission
+                    page</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c110">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-3i</span></p>
+              </td>
+              <td class="c49 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >All major accessibility features remain available during
+                    the voting experience.</span
+                  >
+                </p>
+              </td>
+              <td class="c9" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Test screen reader navigation, list scanning, keyboard
+                    navigation, audio cues, zoom, and high-contrast mode
+                    throughout the entire voting flow to ensure uninterrupted
+                    accessibility support.</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c34">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-3j</span></p>
+              </td>
+              <td class="c49 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Voting interface complies with WCAG 2.1 AA criteria for
+                    perceivable, operable, and understandable content.</span
+                  >
+                </p>
+              </td>
+              <td class="c9" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Review UI elements for proper labels, contrast ratios,
+                    focus order, error messaging, and alternative input methods,
+                    ensuring compliance with WCAG checkpoints.</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c93">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-3k</span></p>
+              </td>
+              <td class="c49 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3">Four-stage confirmation</span>
+                </p>
+              </td>
+              <td class="c9" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >(i) Attempt to controvert the submission workflow by
+                    pausing for a long time between actions, using the back
+                    button, attempt to skip forward using the forward button and
+                    verify that the confirmation workflow cannot be put
+                    off-track</span
+                  >
+                </p>
+              </td>
+            </tr>
+          </thead>
+        </table>
+        <p class="c20 c18"><span class="c14"></span></p>
+        <p class="c26 c18">
+          <span
+            >Phase 3 tests cover the following functional and non-functional
+            requirements:</span
+          >
+        </p>
+        <table class="c85">
+          <tr class="c71">
+            <td class="c27" colspan="1" rowspan="1">
+              <p class="c1"><span class="c40 c7">Requirement ID</span></p>
+            </td>
+            <td class="c124" colspan="1" rowspan="1">
+              <p class="c1">
+                <span class="c40 c7">Requirement Description</span>
+              </p>
+            </td>
+          </tr>
+          <tr class="c81">
+            <td class="c55" colspan="1" rowspan="1">
+              <p class="c1"><span class="c13 c7">FR-5</span></p>
+            </td>
+            <td class="c42" colspan="1" rowspan="1">
+              <p class="c1">
+                <span class="c5">Deliver jurisdiction-specific ballots</span>
+              </p>
+            </td>
+          </tr>
+          <tr class="c71">
+            <td class="c55 c46" colspan="1" rowspan="1">
+              <p class="c1"><span class="c13 c7">FR-6</span></p>
+            </td>
+            <td class="c42 c46" colspan="1" rowspan="1">
+              <p class="c1">
+                <span class="c5"
+                  >Multi-channel ballot access (PWA, iOS, Android)</span
+                >
+              </p>
+            </td>
+          </tr>
+          <tr class="c81">
+            <td class="c55" colspan="1" rowspan="1">
+              <p class="c1"><span class="c13 c7">FR-7</span></p>
+            </td>
+            <td class="c42" colspan="1" rowspan="1">
+              <p class="c1">
+                <span class="c5">Display unbiased candidate lists</span>
+              </p>
+            </td>
+          </tr>
+          <tr class="c71">
+            <td class="c55 c46" colspan="1" rowspan="1">
+              <p class="c1"><span class="c13 c7">FR-8</span></p>
+            </td>
+            <td class="c42 c46" colspan="1" rowspan="1">
+              <p class="c1">
+                <span class="c5">Four-stage confirmation workflow</span>
+              </p>
+            </td>
+          </tr>
+          <tr class="c41">
+            <td class="c55" colspan="1" rowspan="1">
+              <p class="c1"><span class="c13 c7">FR-8.1</span></p>
+            </td>
+            <td class="c42" colspan="1" rowspan="1">
+              <p class="c1"><span class="c5">Selection stage</span></p>
+            </td>
+          </tr>
+          <tr class="c56">
+            <td class="c55 c46" colspan="1" rowspan="1">
+              <p class="c1"><span class="c13 c7">FR-8.2</span></p>
+            </td>
+            <td class="c42 c46" colspan="1" rowspan="1">
+              <p class="c1">
+                <span class="c5"
+                  >Review stage with &quot;Change&quot; option</span
+                >
+              </p>
+            </td>
+          </tr>
+          <tr class="c30">
+            <td class="c55" colspan="1" rowspan="1">
+              <p class="c1"><span class="c13 c7">FR-8.3</span></p>
+            </td>
+            <td class="c42" colspan="1" rowspan="1">
+              <p class="c1">
+                <span class="c5">Explicit confirmation stage</span>
+              </p>
+            </td>
+          </tr>
+          <tr class="c56">
+            <td class="c55 c46" colspan="1" rowspan="1">
+              <p class="c1"><span class="c13 c7">FR-8.4</span></p>
+            </td>
+            <td class="c42 c46" colspan="1" rowspan="1">
+              <p class="c1">
+                <span class="c5">Final submission with countdown timer</span>
+              </p>
+            </td>
+          </tr>
+          <tr class="c41">
+            <td class="c55" colspan="1" rowspan="1">
+              <p class="c1"><span class="c13 c7">FR-9</span></p>
+            </td>
+            <td class="c42" colspan="1" rowspan="1">
+              <p class="c1">
+                <span class="c5">Comprehensive accessibility features</span>
+              </p>
+            </td>
+          </tr>
+          <tr class="c41">
+            <td class="c55 c46" colspan="1" rowspan="1">
+              <p class="c1"><span class="c13 c7">FR-9.1 - 9.6</span></p>
+            </td>
+            <td class="c42 c46" colspan="1" rowspan="1">
+              <p class="c1">
+                <span class="c5"
+                  >Screen readers, high-contrast, keyboard nav, audio, scaling,
+                  multi-language</span
+                >
+              </p>
+            </td>
+          </tr>
+          <tr class="c41">
+            <td class="c55 c46" colspan="1" rowspan="1">
+              <p class="c1"><span class="c13 c7">NFR-20</span></p>
+            </td>
+            <td class="c42 c46" colspan="1" rowspan="1">
+              <p class="c1">
+                <span class="c5">Deterministic sequence workflow</span>
+              </p>
+            </td>
+          </tr>
+        </table>
+        <p class="c20 c18"><span class="c14"></span></p>
+      </div>
+
+      <!-- PHASE FOUR -->
+      <div id="phase-four" class="page">
+        <p class="c20 c18"><span class="c14"></span></p>
+        <h1 class="c18 c38" id="h.alb3aphj4yiz">
+          <span class="c58"
+            >Phase Four: Cast Ballot, Encrypt, Ledger and Audit</span
+          >
+        </h1>
+        <p class="c26 c18">
+          <span
+            >Goal: Establish unlinkability and immutability across vote
+            cast/encrypt/record/receipt.</span
+          >
+        </p>
+        <table class="c85">
+          <thead>
+            <tr class="c56">
+              <td class="c74" colspan="1" rowspan="1">
+                <p class="c1"><span class="c40 c7">Test Case ID</span></p>
+              </td>
+              <td class="c64" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c40 c7">Test Case Objective</span>
+                </p>
+              </td>
+              <td class="c22" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c40 c7">Test Case Description</span>
+                </p>
+              </td>
+              <tbody></tbody>
+            </tr>
+            <tr class="c103">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-4a</span></p>
+              </td>
+              <td class="c49 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3">Submission Phase Validation</span>
+                </p>
+              </td>
+              <td class="c9" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >(i) Verify that the key of the identity of the voter in the
+                    voter file is distinct from the voter identifier in the file
+                    of ballots cast. (ii) Attempt to run the identity
+                    cryptographic key on the ballot identifier and confirm that
+                    the key does not decrypt the ballot identifier (iii) Attempt
+                    to run the ballot cryptographic key on the voter identity
+                    identifier and confirm that the key does not decrypt the
+                    identity identifier</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c67">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-4b</span></p>
+              </td>
+              <td class="c49 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3">Four-stage confirmation</span>
+                </p>
+              </td>
+              <td class="c9" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >(i) Using a took like chrome://webrtc-internals/, confirm
+                    that all internet connections are using 256-bit AES
+                    encryption</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c52">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-4c</span></p>
+              </td>
+              <td class="c49 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Verify encrypted votes are recorded on a permission ledger
+                    with append only, tamper-evident properties.</span
+                  >
+                </p>
+              </td>
+              <td class="c9" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Submit one or more encrypted ballots through the cast path;
+                    query the ledger for corresponding entries; attempt invalid
+                    modifications (e.g., replay/alteration via simulated node)
+                    and confirm rejection; verify block metadata (hash,
+                    timestamp, jurisdiction tag) and inclusion proof are
+                    available to downstream audit tools.</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c52">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-4d</span></p>
+              </td>
+              <td class="c49 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Verify that rotating signing/encryption keys does not break
+                    verification, receipt checks, or ledger validation.</span
+                  >
+                </p>
+              </td>
+              <td class="c9" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Execute a rotation via the key-management service; cast
+                    votes before and after rotation; confirm receipts and ledger
+                    validation succeed for both generations; ensure old keys are
+                    retired but verifiable, and new keys are active and
+                    discoverable; check rotation events are logged.</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c34">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-4e</span></p>
+              </td>
+              <td class="c46 c49" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Ensure voters receive a cryptographic receipt that proves
+                    inclusion without revealing vote content.</span
+                  >
+                </p>
+              </td>
+              <td class="c9" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Cast a ballot and capture the issued receipt; use the
+                    receipt against the verification interference to confirm
+                    ledger inclusion; validate that no ballot choices or
+                    identity data are revealed during verification.</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c29">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-4f</span></p>
+              </td>
+              <td class="c49 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Validate the portal can verify a receipt and tally
+                    inclusion using ZK proofs without exposing the vote.</span
+                  >
+                </p>
+              </td>
+              <td class="c9" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Present a valid receipt to the portal; confirm it returns a
+                    positive proof of inclusion; exercise negative cases
+                    (malformed/expired receipts) and verify denial with safe
+                    error messaging; confirm no identity or selection data is
+                    exposed in responses or logs.</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c29">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-4g</span></p>
+              </td>
+              <td class="c49 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Confirm all Phase-5 operations write tamper-evident,
+                    privacy-preserving audit entries.</span
+                  >
+                </p>
+              </td>
+              <td class="c9" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Perform cast &rarr; ledger &rarr; rotation &rarr;tally
+                    &rarr;verification flows; inspect audit trail for each step
+                    (IDs, timestamps, nonces); attempt to alter or delete
+                    entries and confirm detection (hash mismatch/chain break);
+                    ensure logs contain no PII or ballot content.</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c29">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-4h</span></p>
+              </td>
+              <td class="c49 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Validate that an external verifier can reproduce results
+                    using public proofs and ledger state.</span
+                  >
+                </p>
+              </td>
+              <td class="c9" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Export the required public artifacts (header, commitments,
+                    proofs); run a verifier (black-box harness) to recompute
+                    totals; confirm match with system tally; introduce a
+                    controlled discrepancy in a staging snapshot and verify the
+                    verifier flags it.</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c34">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-4i</span></p>
+              </td>
+              <td class="c49 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Confirm encryption remains end-to-end through storage and
+                    during tally prep.</span
+                  >
+                </p>
+              </td>
+              <td class="c9" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Trace a ballot from client encryption through ledger
+                    persistence; validate ciphertext only at rest/in transit;
+                    ensure decryption occurs only within threshold-tally flow
+                    with required quorum.</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c34">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-4j</span></p>
+              </td>
+              <td class="c49 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Validate policy and mechanics of periodic rotation and
+                    distributed escrow.</span
+                  >
+                </p>
+              </td>
+              <td class="c9" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Trigger a scheduled rotation; verify keys are escrowed with
+                    threshold access; confirm old keys verify historical
+                    artifacts; ensure monitoring/alerts fire for rotation
+                    milestones.</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c29">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-4k</span></p>
+              </td>
+              <td class="c49 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Demonstrate that no entity can infer how a specific voter
+                    voted.</span
+                  >
+                </p>
+              </td>
+              <td class="c9" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Correlate Phase-5 artifacts (receipts, ledger entries,
+                    proofs, tally outputs) and confirm no linkage to identities;
+                    attempt linkage attacks (timing, metadata) and verify
+                    mitigation (batching/mixing/indistinguishability).</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c34">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-4l</span></p>
+              </td>
+              <td class="c49 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Ensure compatibility with leading screen readers across
+                    platforms (JAWS, VoiceOver, NVDA).</span
+                  >
+                </p>
+              </td>
+              <td class="c9" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Run the ballot interface with each supported screen reader,
+                    verifying correct semantic structure, announced labels,
+                    navigable components, and accurate reading of
+                    candidate/contest information.</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c29">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-4m</span></p>
+              </td>
+              <td class="c49 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Validate correct system performance across network,
+                    connectivity, and device variability reflective of rural and
+                    urban deployment contexts.</span
+                  >
+                </p>
+              </td>
+              <td class="c9" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Execute voting sessions under different bandwidth, latency,
+                    and device capability profiles; confirm the interface and
+                    data submission behave correctly under each scenario.</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c48">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-4n</span></p>
+              </td>
+              <td class="c49 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3">Four-stage confirmation</span>
+                </p>
+              </td>
+              <td class="c9" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >(i) Verify that the application makes a reassuring chime
+                    when a candidate is selected and different chimes for each
+                    of the 4-phase confirmation. (ii) When the vote is finally
+                    submitted, issue a &quot;Your vote has been recorded&quot;
+                    visual message and audio message (iii) Verify that the
+                    message is voiced in the language preference of the
+                    user</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c80">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-4o</span></p>
+              </td>
+              <td class="c49 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3">Four-stage confirmation</span>
+                </p>
+              </td>
+              <td class="c9" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >(i) Visually inspect buttons for sufficiently large size
+                    for finger-touches (ii) Visually inspect text to confirm
+                    font size of at least 14 points (iii) Confirm count-down
+                    timer appears on each screen and is voiced for users who set
+                    that option in their profile</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c34">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-4p</span></p>
+              </td>
+              <td class="c49 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Verify audit logs are immutable and cross-checked against
+                    ledger anchors.</span
+                  >
+                </p>
+              </td>
+              <td class="c9" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Compare audit logs chains with on-chain anchors; simulate
+                    log truncation/alteration and confirm detection; verify
+                    retention controls are enforced by policy (pointer to
+                    retention system if separate).</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c34">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-4q</span></p>
+              </td>
+              <td class="c49 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Confirm the system stores audit logs in a format and
+                    location that supports mandatory 22-month retention.</span
+                  >
+                </p>
+              </td>
+              <td class="c9" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Submit sample ballots and verify that logs (timestamps,
+                    selections, events) appear in the long-term storage location
+                    with correct retention policy metadata applied.</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c29">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-4r</span></p>
+              </td>
+              <td class="c49 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Validate that the system generates and verifies
+                    cryptographic ZKP proofs for election integrity without
+                    exposing voter identity.</span
+                  >
+                </p>
+              </td>
+              <td class="c9" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Trigger a ballot submission through the verification
+                    pipeline and confirm that a valid ZKP is produced,
+                    validated, logged, and stored without revealing identifying
+                    voter information.</span
+                  >
+                </p>
+              </td>
+            </tr>
+          </thead>
+        </table>
+        <p class="c20 c18"><span class="c14"></span></p>
+        <p class="c26 c18">
+          <span
+            >Phase 4 tests cover the following functional and non-functional
+            requirements:</span
+          >
+        </p>
+        <table class="c85">
+          <thead>
+            <tr class="c96">
+              <td class="c92" colspan="1" rowspan="1">
+                <p class="c1"><span class="c40 c7">Requirement ID</span></p>
+              </td>
+              <td class="c120" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c40 c7">Requirement Description</span>
+                </p>
+              </td>
+              <tbody></tbody>
+            </tr>
+            <tr class="c8">
+              <td class="c10" colspan="1" rowspan="1">
+                <p class="c1"><span class="c13 c7">FR-10</span></p>
+              </td>
+              <td class="c50" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c5">Blind signature cryptography</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="c8">
+              <td class="c10" colspan="1" rowspan="1">
+                <p class="c1"><span class="c13 c7">FR-12</span></p>
+              </td>
+              <td class="c50" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c5">End-to-end encryption (256-bit AES)</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="c8">
+              <td class="c10 c46" colspan="1" rowspan="1">
+                <p class="c1"><span class="c13 c7">FR-13</span></p>
+              </td>
+              <td class="c35" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c5">Blockchain immutable storage</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="c6">
+              <td class="c10" colspan="1" rowspan="1">
+                <p class="c1"><span class="c13 c7">FR-14</span></p>
+              </td>
+              <td class="c50" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c5">Automated cryptographic key rotation</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="c6">
+              <td class="c10 c46" colspan="1" rowspan="1">
+                <p class="c1"><span class="c13 c7">FR-15</span></p>
+              </td>
+              <td class="c35" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c5">Generate cryptographic vote receipts</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="c81">
+              <td class="c10" colspan="1" rowspan="1">
+                <p class="c1"><span class="c13 c7">FR-16</span></p>
+              </td>
+              <td class="c50" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c5"
+                    >Verification portal with zero-knowledge proofs</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c8">
+              <td class="c10" colspan="1" rowspan="1">
+                <p class="c1"><span class="c13 c7">FR-19</span></p>
+              </td>
+              <td class="c50" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c5">Tamper-evident audit logs</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="c8">
+              <td class="c10 c46" colspan="1" rowspan="1">
+                <p class="c1"><span class="c13 c7">FR-20</span></p>
+              </td>
+              <td class="c35" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c5">Independent third-party verification</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="c8">
+              <td class="c10 c46" colspan="1" rowspan="1">
+                <p class="c1"><span class="c13 c7">NFR-1</span></p>
+              </td>
+              <td class="c35" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c5">End-to-end encryption (256-bit AES)</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="c8">
+              <td class="c10 c46" colspan="1" rowspan="1">
+                <p class="c1"><span class="c13 c7">NFR-5</span></p>
+              </td>
+              <td class="c35" colspan="1" rowspan="1">
+                <p class="c1"><span class="c5">Quarterly key rotation</span></p>
+              </td>
+            </tr>
+            <tr class="c8">
+              <td class="c10 c46" colspan="1" rowspan="1">
+                <p class="c1"><span class="c13 c7">NFR-10</span></p>
+              </td>
+              <td class="c35" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c5">Ballot secrecy compliance</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="c81">
+              <td class="c10 c46" colspan="1" rowspan="1">
+                <p class="c1"><span class="c13 c7">NFR-11</span></p>
+              </td>
+              <td class="c35" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c5">WCAG 2.1 Level AA compliance</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="c81">
+              <td class="c10" colspan="1" rowspan="1">
+                <p class="c1"><span class="c13 c7">NFR-12</span></p>
+              </td>
+              <td class="c50" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c5">Scenario-based design (rural/urban)</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="c30">
+              <td class="c10 c46" colspan="1" rowspan="1">
+                <p class="c1"><span class="c13 c7">NFR-13</span></p>
+              </td>
+              <td class="c35" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c5">Explicit visual/audio feedback</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="c41">
+              <td class="c10" colspan="1" rowspan="1">
+                <p class="c1"><span class="c13 c7">NFR-14</span></p>
+              </td>
+              <td class="c50" colspan="1" rowspan="1">
+                <p class="c1"><span class="c5">Anti-misclick design</span></p>
+              </td>
+            </tr>
+            <tr class="c8">
+              <td class="c10 c46" colspan="1" rowspan="1">
+                <p class="c1"><span class="c13 c7">NFR-24</span></p>
+              </td>
+              <td class="c35" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c5">Tamper-evident audit logs</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="c41">
+              <td class="c10" colspan="1" rowspan="1">
+                <p class="c1"><span class="c13 c7">NFR-25</span></p>
+              </td>
+              <td class="c50" colspan="1" rowspan="1">
+                <p class="c1"><span class="c5">22-month log retention</span></p>
+              </td>
+            </tr>
+            <tr class="c70">
+              <td class="c10 c46" colspan="1" rowspan="1">
+                <p class="c1"><span class="c13 c7">NFR-26</span></p>
+              </td>
+              <td class="c35" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c5">Zero-knowledge proof verification</span>
+                </p>
+              </td>
+            </tr>
+          </thead>
+        </table>
+        <p class="c20 c18"><span class="c14"></span></p>
+      </div>
+
+      <!-- PHASE FIVE -->
+      <div id="phase-five" class="page">
+        <p class="c20 c18"><span class="c14"></span></p>
+        <h1 class="c38 c18" id="h.j6lm7o13hdt1">
+          <span class="c58"
+            >Phase Five: Vote Tally, Verification Portal, and Pollbook
+            Sync</span
+          >
+        </h1>
+        <p class="c18 c26">
+          <span
+            >Goal: Validate threshold decryption, end-to-end verifiability, and
+            duplicative-vote prevention across channels.</span
+          >
+        </p>
+        <table class="c85">
+          <thead>
+            <tr class="c12">
+              <td class="c74" colspan="1" rowspan="1">
+                <p class="c1"><span class="c40 c7">Test Case ID</span></p>
+              </td>
+              <td class="c64" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c40 c7">Test Case Objective</span>
+                </p>
+              </td>
+              <td class="c22" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c40 c7">Test Case Description</span>
+                </p>
+              </td>
+              <tbody></tbody>
+            </tr>
+            <tr class="c29">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-5a</span></p>
+              </td>
+              <td class="c49 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Ensure tallying requires M-of-N officials and cannot
+                    proceed with an incomplete quorum.</span
+                  >
+                </p>
+              </td>
+              <td class="c9" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Close the election window; attempt tally with insufficient
+                    keys (expect block); perform tally with a valid quorum and
+                    verify aggregated results are produced; confirm partial
+                    decrypts/signatures are recorded for audit.</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c29">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-5b</span></p>
+              </td>
+              <td class="c49 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Verify post-submission status is synchronized to prevent
+                    duplicates across all channels.</span
+                  >
+                </p>
+              </td>
+              <td class="c9" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >After a successful submission, immediately attempt
+                    additional digital and in-person (simulated pollbook) votes;
+                    confirm rejection with correct reason; verify cross-channel
+                    sync events and conflict handling under brief network
+                    partition/recovery.</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c70">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-5c</span></p>
+              </td>
+              <td class="c49 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3">Ensure data consistency</span>
+                </p>
+              </td>
+              <td class="c11" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Verify that votes are not duplicated or lost across nodes,
+                    and that new vote tallies are available within 5 minutes of
+                    submission.</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c41">
+              <td class="c16" colspan="1" rowspan="1">
+                <p class="c19"><span class="c3">IT-5d</span></p>
+              </td>
+              <td class="c49 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Separation of concerns between microservices</span
+                  >
+                </p>
+              </td>
+              <td class="c11" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c3"
+                    >Ensure that the authentication module does not take in more
+                    data than absolutely necessary for authenticating users.
+                    Verify that only opaque tokens are passed to the ballot and
+                    voting modules to confirm authentication.</span
+                  >
+                </p>
+              </td>
+            </tr>
+          </thead>
+        </table>
+        <p class="c18 c20"><span class="c14"></span></p>
+        <p class="c20 c18"><span class="c14"></span></p>
+        <p class="c26 c18">
+          <span
+            >Phase 5 tests cover the following functional and non-functional
+            requirements:</span
+          >
+        </p>
+        <table class="c85">
+          <tr class="c12">
+            <td class="c100" colspan="1" rowspan="1">
+              <p class="c1"><span class="c40 c7">Requirement ID</span></p>
+            </td>
+            <td class="c77" colspan="1" rowspan="1">
+              <p class="c1">
+                <span class="c40 c7">Requirement Description</span>
+              </p>
+            </td>
+          </tr>
+          <tr class="c8">
+            <td class="c2" colspan="1" rowspan="1">
+              <p class="c1"><span class="c13 c7">FR-17</span></p>
+            </td>
+            <td class="c62" colspan="1" rowspan="1">
+              <p class="c1">
+                <span class="c5">Vote tallying with threshold decryption</span>
+              </p>
+            </td>
+          </tr>
+          <tr class="c8">
+            <td class="c2 c46" colspan="1" rowspan="1">
+              <p class="c1"><span class="c13 c7">FR-18</span></p>
+            </td>
+            <td class="c62 c46" colspan="1" rowspan="1">
+              <p class="c1">
+                <span class="c5">Update voter status in database</span>
+              </p>
+            </td>
+          </tr>
+          <tr class="c30">
+            <td class="c2 c46" colspan="1" rowspan="1">
+              <p class="c1"><span class="c13 c7">FR-25</span></p>
+            </td>
+            <td class="c62 c46" colspan="1" rowspan="1">
+              <p class="c1">
+                <span class="c5">Real-time voter status synchronization</span>
+              </p>
+            </td>
+          </tr>
+          <tr class="c56">
+            <td class="c2" colspan="1" rowspan="1">
+              <p class="c1"><span class="c13 c7">NFR-9</span></p>
+            </td>
+            <td class="c62" colspan="1" rowspan="1">
+              <p class="c1">
+                <span class="c5"
+                  >Separation of concerns (authentication vs. voting)</span
+                >
+              </p>
+            </td>
+          </tr>
+        </table>
+        <p class="c20 c18"><span class="c14"></span></p>
+      </div>
+
+      <!-- VALIDATION TESTING -->
+      <div id="validation-testing" class="page">
+        <h1 class="c38 c18" id="h.c5259buwh1ls">
+          <span class="c37 c7">Validation Testing</span>
+        </h1>
+        <p class="c1 c18">
+          <span
+            >End-to-end validation confirms the system meets functional and
+            non-functional requirements without exposing user identities or vote
+            content. Below are validation test skeletons mapped to requirements.
+            Included are format and steps only; no specific test data nor
+            expected results are described.</span
+          >
+        </p>
+        <p class="c20 c18"><span class="c14"></span></p>
+        <table class="c98">
+          <thead>
+            <tr class="c72">
+              <td class="c23" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c40 c66 c7 c102">Validation Test ID</span>
+                </p>
+              </td>
+              <td class="c116" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c7 c40">Validation Test Objective</span>
+                </p>
+              </td>
+              <td class="c75" colspan="1" rowspan="1">
+                <p class="c19">
+                  <span class="c40 c7">Validation Test &nbsp;Description</span>
+                </p>
+              </td>
+              <td class="c95" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c40 c7"
+                    >Functional and Non-Functional Requirement ID</span
+                  >
+                </p>
+              </td>
+              <tbody></tbody>
+            </tr>
+            <tr class="c109">
+              <td class="c21" colspan="1" rowspan="1">
+                <p class="c19"><span class="c43 c3">VT-1</span></p>
+              </td>
+              <td class="c46 c47" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c43 c68 c7"
+                    >End-to-End Secure Voting Session:</span
+                  >
+                </p>
+                <p class="c1">
+                  <span class="c43 c3"
+                    >Validate that a voter can complete a full voting session
+                    (authentication &rarr; ballot &rarr; confirmation &rarr;
+                    cast&rarr;receipt) securely and anonymously</span
+                  >
+                </p>
+              </td>
+              <td class="c24" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c43 c3"
+                    >Execute a complete user journey: perform three-factor
+                    authentication to obtain an anonymous credential; access the
+                    correct jurisdiction ballot; navigate the four-stage
+                    confirmation workflow (select &rarr; review&rarr; confirm
+                    &rarr; submit); cast the vote so it is encrypted, recorded
+                    on the ledger, and a cryptographic receipt is issued.
+                    Throughout the flow, confirm that only opaque tokens are
+                    used beyond the authentication boundary and no personally
+                    identifiable information appears in downstream requests or
+                    logs.</span
+                  >
+                </p>
+              </td>
+              <td class="c60 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c43 c3"
+                    >FR-1, FR-1.1, FR-1.2, FR-1.3, FR-1.4, FR-2, FR-3, FR-5,
+                    FR-6, FR-8, FR-8.1&ndash;FR-8.4, FR-12, FR-13, FR-15, FR-22;
+                    NFR-1, NFR-3, NFR-7, NFR-9, NFR-10</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c8">
+              <td class="c21" colspan="1" rowspan="1">
+                <p class="c19"><span class="c43 c3">VT-2</span></p>
+              </td>
+              <td class="c47 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c43 c68 c7"
+                    >Multi-Channel Ballot Delivery &amp; Accessibility:</span
+                  >
+                </p>
+                <p class="c1">
+                  <span class="c43 c3"
+                    >Verify that voters across devices and connectivity
+                    conditions receive the correct ballot and can use all
+                    accessibility features.</span
+                  >
+                </p>
+              </td>
+              <td class="c24" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c43 c3"
+                    >Using the same eligible voter profile, access the system
+                    from PWA, iOS, and Android clients under both normal and
+                    low-bandwidth network conditions. Confirm that each client
+                    delivers the correct jurisdiction-specific ballot and that
+                    screen reader navigation, high-contrast display,
+                    keyboard-only navigation (where applicable), audio guidance,
+                    text scaling up to 200%, and multi-language options remain
+                    available and usable throughout the full voting flow.</span
+                  >
+                </p>
+              </td>
+              <td class="c60 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c43 c3"
+                    >FR-5, FR-6, FR-9, FR-9.1&ndash;FR-9.6; NFR-11, NFR-12,
+                    NFR-13, NFR-14, NFR-15, NFR-16</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c8">
+              <td class="c21" colspan="1" rowspan="1">
+                <p class="c19"><span class="c43 c3">VT-3</span></p>
+              </td>
+              <td class="c47 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c43 c68 c7"
+                    >Deterministic Four-Stage Confirmation Workflow:</span
+                  >
+                </p>
+                <p class="c1">
+                  <span class="c3 c43"
+                    >Validate that the entire confirmation workflow is
+                    deterministic, resistant to user navigation tricks, and
+                    prevents accidental submission.</span
+                  >
+                </p>
+              </td>
+              <td class="c24" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c43 c3"
+                    >From ballot access through submission, exercise the
+                    four-stage sequence (selection, review, confirmation,
+                    submission) while introducing navigation variations: long
+                    pauses, use of browser back/forward, repeated attempts to
+                    skip stages, and repeated confirmation clicks. Confirm the
+                    sequence cannot be bypassed or reordered, and that the
+                    countdown-based submission stage always enforces the cancel
+                    window and multi-step confirmation behavior.</span
+                  >
+                </p>
+              </td>
+              <td class="c60 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c43 c3"
+                    >FR-8, FR-8.1, FR-8.2, FR-8.3, FR-8.4; NFR-20</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c54">
+              <td class="c21" colspan="1" rowspan="1">
+                <p class="c19"><span class="c43 c3">VT-4</span></p>
+              </td>
+              <td class="c47 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c43 c68 c7"
+                    >Anonymity, Encryption, and Ledger Integrity:</span
+                  >
+                </p>
+                <p class="c1">
+                  <span class="c43 c3"
+                    >Confirm that votes remain encrypted and unlinkable to
+                    voters while being immutably stored on the ledger.</span
+                  >
+                </p>
+              </td>
+              <td class="c24" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c43 c3"
+                    >Complete multiple voting sessions from different voters and
+                    jurisdictions. For each session, trace the flow from
+                    anonymous credential to encrypted ballot, blind-signing, and
+                    ledger recording. Inspect stored artifacts to verify only
+                    ciphertext and non-identifying metadata are persisted, then
+                    attempt correlation between authentication records and
+                    ledger entries using timing and metadata. Confirm that blind
+                    signatures, key separation, and ledger design prevent
+                    linking a specific voter to a specific encrypted
+                    ballot.</span
+                  >
+                </p>
+              </td>
+              <td class="c46 c60" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c43 c3"
+                    >FR-10, FR-12, FR-13, FR-19; NFR-1, NFR-2, NFR-3, NFR-7,
+                    NFR-8, NFR-10, NFR-24</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c8">
+              <td class="c21" colspan="1" rowspan="1">
+                <p class="c19"><span class="c43 c3">VT-5</span></p>
+              </td>
+              <td class="c47 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c43 c68 c7"
+                    >Receipt Verification and Zero-Knowledge Proofs:</span
+                  >
+                </p>
+                <p class="c1">
+                  <span class="c43 c3"
+                    >Validate that voters can verify inclusion of their vote
+                    through the verification portal using cryptographic receipts
+                    and zero-knowledge proofs.</span
+                  >
+                </p>
+              </td>
+              <td class="c24" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c43 c3"
+                    >For multiple completed voting sessions, collect the issued
+                    cryptographic receipts and submit them to the verification
+                    portal. Confirm that valid receipts yield successful
+                    inclusion verification while malformed, expired, or forged
+                    receipts are rejected with safe, non-revealing error
+                    messages. Ensure that, at no point in the verification
+                    process, the portal exposes ballot content or identity
+                    information in responses or logs.</span
+                  >
+                </p>
+              </td>
+              <td class="c60 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c43 c3"
+                    >FR-15, FR-16, FR-20; NFR-2, NFR-3, NFR-24, NFR-26</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c123">
+              <td class="c21" colspan="1" rowspan="1">
+                <p class="c19"><span class="c43 c3">VT-6</span></p>
+              </td>
+              <td class="c47 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c43 c7 c68"
+                    >Threshold Tally and Independent Re-Verification:</span
+                  >
+                </p>
+                <p class="c1">
+                  <span class="c43 c3"
+                    >Ensure that final election tallies require threshold
+                    decryption by multiple officials and can be independently
+                    re-verified.</span
+                  >
+                </p>
+              </td>
+              <td class="c24" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c43 c3"
+                    >After an election window closes, attempt to run the tally
+                    with fewer than the required number of decryption key
+                    holders and confirm the operation is blocked. Then run the
+                    tally with a valid quorum and export the public proofs and
+                    ledger metadata. Use an independent verification tool or
+                    process to recompute aggregate results from the public
+                    artifacts and confirm they match the system&rsquo;s reported
+                    tallies.</span
+                  >
+                </p>
+              </td>
+              <td class="c60 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c43 c3"
+                    >FR-17, FR-20; NFR-5, NFR-24, NFR-26</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c54">
+              <td class="c21" colspan="1" rowspan="1">
+                <p class="c19"><span class="c43 c3">VT-7</span></p>
+              </td>
+              <td class="c47 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c43 c68 c7"
+                    >Duplicate-Vote Prevention Across Channels:</span
+                  >
+                </p>
+                <p class="c1">
+                  <span class="c43 c3"
+                    >Validate that a voter cannot successfully cast more than
+                    &nbsp;one vote across digital and in-person channels.</span
+                  >
+                </p>
+              </td>
+              <td class="c24" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c43 c3"
+                    >Have an eligible voter cast a digital ballot to completion.
+                    Immediately afterward, attempt to submit another digital
+                    ballot with the same identity, followed by a simulated
+                    in-person pollbook vote for the same voter. Introduce a
+                    short simulated network partition and recovery while these
+                    attempts occur. Confirm that all subsequent attempts are
+                    rejected and that voter status remains synchronized and
+                    consistent across systems after connectivity is
+                    restored.</span
+                  >
+                </p>
+              </td>
+              <td class="c60 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c43 c3">FR-18, FR-25; NFR-9, NFR-22</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="c118">
+              <td class="c21" colspan="1" rowspan="1">
+                <p class="c19"><span class="c43 c3">VT-8</span></p>
+              </td>
+              <td class="c47 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c43 c68 c7"
+                    >System Availability, Performance, and Completion
+                    Time:</span
+                  >
+                </p>
+                <p class="c1">
+                  <span class="c43 c3"
+                    >Validate that the system maintains required availability,
+                    scalability, and completion time envelopes during peak
+                    voting periods.</span
+                  >
+                </p>
+              </td>
+              <td class="c24" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c43 c3"
+                    >Apply a simulated peak-load traffic pattern that
+                    approximates millions of concurrent users during a
+                    compressed election time window. Observe system behavior for
+                    service availability, horizontal scaling of microservices,
+                    and typical end-to-end vote completion time for
+                    representative users. Focus on whether the system continues
+                    to accept and process votes within configured response time
+                    and completion time envelopes, without specifying exact
+                    numeric metrics in this test definition.</span
+                  >
+                </p>
+              </td>
+              <td class="c60 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c43 c3"
+                    >FR-21, FR-23; NFR-15, NFR-17, NFR-18, NFR-19, NFR-21,
+                    NFR-22, NFR-23</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr class="c6">
+              <td class="c21" colspan="1" rowspan="1">
+                <p class="c19"><span class="c43 c3">VT-9</span></p>
+              </td>
+              <td class="c47 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c43 c68 c7"
+                    >Audit Trail Completeness and Retention:</span
+                  >
+                </p>
+                <p class="c1">
+                  <span class="c43 c3"
+                    >Confirm that all critical election events are captured in
+                    tamper-evident audit logs and retained for the required
+                    period.</span
+                  >
+                </p>
+              </td>
+              <td class="c24" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c43 c3"
+                    >Execute a representative subset of election activities
+                    (authentication, ballot access, vote casting, key rotation,
+                    tallying, verification checks). Inspect the audit logs to
+                    ensure each step is recorded with appropriate identifiers
+                    and timestamps, and that the logs are anchored or
+                    cross-checked against ledger metadata. Validate that audit
+                    entries are stored in the designated long-term location with
+                    retention controls appropriate to the legal retention
+                    period.</span
+                  >
+                </p>
+              </td>
+              <td class="c60 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c43 c3">FR-19; NFR-24, NFR-25, NFR-27</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="c54">
+              <td class="c21" colspan="1" rowspan="1">
+                <p class="c19"><span class="c43 c3">VT-10</span></p>
+              </td>
+              <td class="c47 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c43 c68 c7"
+                    >Legal and Policy Compliance Check:</span
+                  >
+                </p>
+                <p class="c1">
+                  <span class="c43 c3"
+                    >Validate that the deployed system&rsquo;s observable
+                    behavior aligns with applicable election regulations and
+                    standards.</span
+                  >
+                </p>
+              </td>
+              <td class="c24" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c43 c3"
+                    >Review the full end-to-end voting, tally, and verification
+                    process as exercised in earlier validation tests against
+                    Help America Vote Act (HAVA), Election Assistance Commission
+                    (EAC) Voting System Standards, and relevant state electronic
+                    voting rules. Confirm that ballot secrecy, auditability,
+                    accessibility, and voter eligibility behaviors observed in
+                    the system conform to these standards, and that no observed
+                    operational behavior contradicts required policies.</span
+                  >
+                </p>
+              </td>
+              <td class="c60 c46" colspan="1" rowspan="1">
+                <p class="c1">
+                  <span class="c43 c3"
+                    >NFR-10, NFR-11, NFR-24, NFR-25, NFR-27</span
+                  >
+                </p>
+              </td>
+            </tr>
+          </thead>
+        </table>
+        <p class="c20 c18"><span class="c14"></span></p>
+        <h1 class="c38 c18" id="h.ucjrs9mfc1mf">
+          <span class="c7 c37">&nbsp;</span>
+        </h1>
+        <p class="c1 c18 c31"><span class="c0"></span></p>
+        <div>
+          <p class="c4"><span class="c0"></span></p>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="navlinks.js"></script>
+</html>
